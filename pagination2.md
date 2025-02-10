@@ -1,15 +1,18 @@
----catatan disini---
+**This formula created by Chatgpt**
+
 ### **🛠️ Panduan Membuat Pagination dengan Tombol yang Terbatas**
-Pagination adalah teknik yang membagi data ke dalam beberapa halaman agar lebih mudah diakses. Dalam pagination yang baik, jumlah tombol halaman harus dibatasi agar UI tetap rapi.  
+
+Pagination adalah teknik yang membagi data ke dalam beberapa halaman agar lebih mudah diakses. Dalam pagination yang baik, jumlah tombol halaman harus dibatasi agar UI tetap rapi.
 
 Agar pagination bekerja dengan baik, perhatikan **4 aspek utama**:
-1. **Data yang Dipaginasi**  
+
+1. **Data yang Dipaginasi**
    - Tentukan **jumlah total data** dan **jumlah data per halaman**.
-2. **Menentukan Halaman Saat Ini**  
+2. **Menentukan Halaman Saat Ini**
    - Gunakan **state untuk menyimpan halaman saat ini**.
-3. **Menentukan Jumlah Total Halaman**  
+3. **Menentukan Jumlah Total Halaman**
    - Hitung total halaman berdasarkan total data dan jumlah data per halaman.
-4. **Mengontrol Tombol Pagination**  
+4. **Mengontrol Tombol Pagination**
    - **Batasi jumlah tombol** yang ditampilkan agar tidak terlalu panjang.
 
 ---
@@ -23,10 +26,7 @@ Berikut adalah langkah-langkah lengkap beserta analoginya agar lebih mudah dipah
 **🔹 Langkah:**
 
 - Gunakan rumus:  
-  \[
-  \text{Total Halaman} = \frac{\text{Total Data}}{\text{Data Per Halaman}}
-  \]
-  (dibulatkan ke atas).
+  **Total Halaman = (Total Data) / (Data Per Halaman)** (dibulatkan ke atas).
 
 **🛠️ Kode:**
 
@@ -37,9 +37,7 @@ const totalPages = Math.ceil(totalPosts / limit);
 **📖 Analogi:**  
 Bayangkan kamu memiliki **100 halaman buku** dan ingin membaca **5 halaman per hari**.  
 Maka, **total hari yang dibutuhkan** untuk menyelesaikan buku adalah:  
-\[
-100 \div 5 = 20
-\]
+100 ÷ 5 = 20  
 Ini mirip dengan cara kita menghitung **jumlah total halaman pada pagination**.
 
 ---
